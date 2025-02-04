@@ -28,6 +28,7 @@ export default function Home() {
   const generateNewGame = useCallback(() => {
     const newTargetColor = generateRandomColor()
     setShowConfetti(false);
+    
     const newOptions = [newTargetColor]
     while (newOptions.length < 6) {
       const color = generateRandomColor()
@@ -56,6 +57,11 @@ export default function Home() {
     }
   }
 
+  const handleNewGame = () => {
+    generateNewGame()
+    setScore(0)
+  }
+
   return (
     <main className={styles.main}>
       <BackgroundAnimation type="rain" />
@@ -71,7 +77,7 @@ export default function Home() {
         </div>
        
         <GameStatus status={gameStatus} score={score} /> 
-        <NewGameButton onClick={generateNewGame} />
+        <NewGameButton onClick={handleNewGame} />
       </div>
       
        
