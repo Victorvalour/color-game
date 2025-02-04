@@ -1,0 +1,56 @@
+.optionsContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%);
+    animation: rotate 30s linear infinite;
+  }
+  
+  .colorOption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .colorOption:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .colorOption:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5), 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .optionsContainer {
+      width: 280px;
+      height: 280px;
+    }
+  
+    .colorOption {
+      width: 50px;
+      height: 50px;
+      margin: -25px;
+    }
+  }
+  
+  
