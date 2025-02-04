@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, JSX } from "react"
 import styles from "./BackgroundAnimation.module.css"
 
 type AnimationType = "lasers" | "rain" | "shapes"
